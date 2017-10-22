@@ -11,4 +11,11 @@ public class ConnfirmationService {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "ConnfirmationService{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

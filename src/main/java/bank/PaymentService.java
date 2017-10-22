@@ -1,6 +1,7 @@
 package bank;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -18,7 +19,7 @@ public class PaymentService {
         this.transactionService = transactionService;
     }
 
-    @Autowired
+    @Autowired(required = false)
     public void setConnfirmationService(ConnfirmationService connfirmationService) {
         this.connfirmationService = connfirmationService;
     }
@@ -29,7 +30,7 @@ public class PaymentService {
                 "internalReportingService=" + internalReportingService.getName() +
                 ", regulatoryReportingService=" + regulatoryReportingService.getName() +
                 ", transactionService=" + transactionService.getName() +
-                ", connfirmationService=" + connfirmationService.getName() +
+                ", connfirmationService=" + connfirmationService +
                 '}';
     }
 }

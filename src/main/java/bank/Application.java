@@ -8,23 +8,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @ComponentScan
-@Configuration
 public class Application {
 
-    @Bean
-    public ConnfirmationService connfirmationService(){
-        return new ConnfirmationService("The best configuration system.");
-    }
 
-    @Bean
-    public ReportingService reportingService(){
-        return new ReportingService("report");
-    }
-
-    @Bean
-    public TransactionService transactionService(){
-        return new TransactionService("transaction");
-    }
 
     public static void main(String[] args) {
         ApplicationContext context =
